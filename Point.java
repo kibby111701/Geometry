@@ -1,8 +1,8 @@
 public class Point{
-    private int x;
-    private int y; 
+    private double x;
+    private double y; 
 
-    public Point(int x, int y){
+    public Point(double x, double y){
         this.x = x;
         this.y = y; 
     }
@@ -15,9 +15,9 @@ public class Point{
         return this.y; 
     }
 
-    public static double calcDistance(Point point1, Point point2){
-        int xDist = point2.getX() - point1.getX();
-        int yDist = point2.getY() - point2.getY();
+    public double calcDistance( Point point2){
+        double xDist = point2.getX() - this.getX();
+        double yDist = point2.getY() - this.getY();
         double distance = Math.sqrt((xDist * xDist) + (yDist * yDist));
         return distance; 
         

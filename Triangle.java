@@ -15,7 +15,7 @@ public class Triangle{
         double sideTwo = pTwo.calcDistance(pThree);
         double sideThree = pThree.calcDistance(pOne);
 
-        double perimeter = sideOne + sideTwo + sideThree);
+        double perimeter = sideOne + sideTwo + sideThree;
         double semiPerim = perimeter/2;
 
         double area = Math.sqrt(semiPerim * (semiPerim-sideOne) * 
