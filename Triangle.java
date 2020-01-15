@@ -11,9 +11,9 @@ public class Triangle{
     }
 
     public double area(){
-        double sideOne = pOne.distance(pTwo);
-        double sideTwo = pTwo.distance(pThree);
-        double sideThree = pThree.distance(pOne);
+        double sideOne = pOne.calcDistance(pTwo);
+        double sideTwo = pTwo.calcDistance(pThree);
+        double sideThree = pThree.calcDistance(pOne);
 
         double perimeter = sideOne + sideTwo + sideThree);
         double semiPerim = perimeter/2;
