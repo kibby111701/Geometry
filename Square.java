@@ -1,37 +1,51 @@
 public class Square{
-    private double x;
-    private double y;
+    private Point bottomLeft;
+    private double sideLength;
 
-    public Square(Point p1, Point p2, Point p3, Point p4){
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
-
+    public Square(Point bottomLeft, double sideLength){
+        this.bottomLeft = bottomLeft;
+        this.sideLength = sideLength;
     }
 
-    public calcDistance(Point p2){
-        return calcDistance(p1,p2);
-
+    public Point getBottomLeft(){
+        return this.bottomLeft;
     }
 
-    public calcArea(Point p1, Point p2){
-        
+    public double getSideLength(){
+        return this.sideLength;
     }
 
-    public double getP1(){
-        return p1;
+    public double area(){
+        return sideLength * sideLength;
     }
 
-    public double getP2(){
-        return p2;
+    public double perimeter(){
+        return sideLength * 4;
     }
 
-    public double getP3(){
-        return p3;
+    public Point topRight(){
+        Point topRight = new Point(bottomLeft.getX() + sideLength, bottomLeft.getY() + sideLength);
+        return topRight;
     }
 
-    public double getP4(){
-        return p4;
+    public Point topLeft(){
+        Point topLeft = new Point(bottomLeft.getX(), bottomLeft.getY() + sideLength);
+        return topLeft;
     }
+
+    public Point bottomRight(){
+        Point bottomRight = new Point(bottomLeft.getX()+sideLength, bottomLeft.getY());
+        return bottomRight;
+    }
+
+        public static boolean overLap(Square square1, Square square2){
+            if(square1.topLeft().getX() < square2.bottomRight().getX() && square1.topLeft().getY() > square2.bottomLeft().getY() &&
+             square1.bottomRight().getX() > square2.bottomRight().getX() && square1.bottomRight().getY() <  square2.bottomRight().getY()){
+            return true;
+            } else if(square1.topRight() < square2.bottomLeft().getx()
+        }
+    }
+
+
+
 }
