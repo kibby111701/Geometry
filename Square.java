@@ -38,14 +38,24 @@ public class Square{
         return bottomRight;
     }
 
-        public static boolean overLap(Square square1, Square square2){
-            if(square1.topLeft().getX() < square2.bottomRight().getX() && square1.topLeft().getY() > square2.bottomLeft().getY() &&
-             square1.bottomRight().getX() > square2.bottomRight().getX() && square1.bottomRight().getY() <  square2.bottomRight().getY()){
+    public static boolean overLap(Square square1, Square square2){
+        if(square1.topLeft().getX() < square2.bottomRight().getX() && square1.topLeft().getY() > square2.bottomLeft().getY() &&
+        square1.bottomRight().getX() > square2.bottomRight().getX() && square1.bottomRight().getY() <  square2.bottomRight().getY()){
             return true;
-            } else if(square1.topRight() < square2.bottomLeft().getx()
+        }else if(square1.topRight().getX() > square2.bottomLeft().getX() && square1.topRight().getY() > square2.topRight().getY() && 
+        square1.bottomLeft().getX() < square2.bottomLeft().getX() && square1.bottomLeft().getY() < square2.bottomLeft().getY()){
+            return true;
+        }else if(square2.topRight().getX() > square1.bottomLeft().getX() && square2.topRight().getY() > square1.topRight().getY() && 
+        square2.bottomLeft().getX() < square1.bottomLeft().getX() && square2.bottomLeft().getY() < square1.bottomLeft().getY()){
+            return true;
+        }else if(square2.topLeft().getX() < square1.bottomRight().getX() && square2.topLeft().getY() > square1.bottomLeft().getY() &&
+        square2.bottomRight().getX() > square1.bottomRight().getX() && square2.bottomRight().getY() <  square1.bottomRight().getY()){
+            return true;
+        }else if(square1.topLeft().getX() > square2.topLeft().getX() && square1.topLeft().getY() < square2.topLeft().getY() && 
+        square1.bottomRight().getX() < square2.bottomRight().getX() && square1.bottomRight().getY() > square2.bottomRight().getY()){
+            return true;
+        }else { 
+            return false;
         }
     }
-
-
-
 }
