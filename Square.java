@@ -38,18 +38,16 @@ public class Square{
         return bottomRight;
     }
 
+    public boolean differentSigns(Point point1, Point point2){
+        return point1.getX() < point2.getX() && point1.getY() > point2.getY();
+    }
+
+    public boolean sameSign(Point point1, Point point2){
+        return point1.getX() > point2.getX() && point1.getY() > point2.getY();
+    }
+
     public static boolean overLap(Square square1, Square square2){
-        if(square1.topLeft().getX() < square2.bottomRight().getX() && square1.topLeft().getY() > square2.bottomLeft().getY() &&
-        square1.bottomRight().getX() > square2.bottomRight().getX() && square1.bottomRight().getY() <  square2.bottomRight().getY()){
-            return true;
-        }else if(square1.topRight().getX() > square2.bottomLeft().getX() && square1.topRight().getY() > square2.topRight().getY() && 
-        square1.bottomLeft().getX() < square2.bottomLeft().getX() && square1.bottomLeft().getY() < square2.bottomLeft().getY()){
-            return true;
-        }else if(square2.topRight().getX() > square1.bottomLeft().getX() && square2.topRight().getY() > square1.topRight().getY() && 
-        square2.bottomLeft().getX() < square1.bottomLeft().getX() && square2.bottomLeft().getY() < square1.bottomLeft().getY()){
-            return true;
-        }else if(square2.topLeft().getX() < square1.bottomRight().getX() && square2.topLeft().getY() > square1.bottomLeft().getY() &&
-        square2.bottomRight().getX() > square1.bottomRight().getX() && square2.bottomRight().getY() <  square1.bottomRight().getY()){
+        if(differentSigns(square1.topLeft(), square2.bottomRight()) && differentSigns(square2.bottomRight(), square1.bottomRight()){
             return true;
         }else if(square1.topLeft().getX() > square2.topLeft().getX() && square1.topLeft().getY() < square2.topLeft().getY() && 
         square1.bottomRight().getX() < square2.bottomRight().getX() && square1.bottomRight().getY() > square2.bottomRight().getY()){
