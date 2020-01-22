@@ -1,12 +1,10 @@
 public class PetOwner{
     private String name;
-    private Dog dog;
-    private Cat cat; 
+    private Pet[] pets; 
 
-    public PetOwner(String name, Dog dog, Cat cat){
+    public PetOwner(String name, Pet[] pets){
         this.name = name;
-        this.dog = dog;
-        this.cat = cat;
+        this.pets = pets;
     }
 
     public void feedDog(){
