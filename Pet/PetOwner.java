@@ -30,7 +30,7 @@ public class PetOwner{
     }
 
     public void walkCat(){
-        cat.setWalked(true);
+        cat.setWalk(true);
     }
 
     public boolean happy(){
@@ -40,6 +40,14 @@ public class PetOwner{
             return false;
         }
     }
+
+    Pet[] pets = new Pets[2];
+    pets = dog;
+    pets = cat; 
+
+    Pet p = new Dog ("Caleb");
+
+    pets[1].talk();
 
 
 
