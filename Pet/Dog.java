@@ -1,13 +1,9 @@
 public class Dog extends Pet{
    
     
-    public Dog(String name, String breed){
+    public Dog(String name){
         super(name);
-        super(breed);
-    }
 
-    public Dog(String breed){
-        super(breed);
     }
 
     

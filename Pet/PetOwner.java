@@ -7,47 +7,34 @@ public class PetOwner{
         this.pets = pets;
     }
 
-    public void feedDog(){
-        dog.setHunger(true);
+    public void feed(){
+        for (int i = 0; i < pets.length; i++){
+            pets[i].setHunger(true);
+        } 
     }
 
-    public void feedCat(){
-        cat.setHunger(true);
-    }
 
-    public void petDog(){
-        dog.setPet(true);
-    }
-
-    public void petCat(){
-        cat.setPet(true);
-    }
-
-    public void walkDog(){
-        dog.setWalk(true);
-    }
-
-    public void walkCat(){
-        cat.setWalk(true);
-    }
-
-    public boolean happy(){
-        if(cat.happiness() && dog.happiness()){
-            return true;
-        } else {
-            return false;
+    public void pet(){
+        for(int i = 0; i < pets.length; i++){
+            pets[i].setCounter(pets[i].getCounter() + 1);
+            pets[i].setPet(true);
         }
     }
 
-    Pet[] pets = new Pets[2];
-    pets = dog;
-    pets = cat; 
+    public void walk(){
+        for(int i = 0; i < pets.length; i++){
+            pets[i].setWalk(true);
+        }
+    }
 
-    Pet p = new Dog ("Caleb");
-
-    pets[1].talk();
-
-
+    public boolean happy(){
+        for(int i = 0; i < pets.length; i++){
+            if(!pets[i].isHappy()){
+                return false;
+            }
+        }
+        return true; 
+    }
 
 
 }

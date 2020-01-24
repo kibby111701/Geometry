@@ -11,7 +11,7 @@ public class Cat extends Pet{
     }
 
     //OVERWRITING 
-    public boolean happiness(){
+    public boolean isHappy(){
         if(this.getHunger() && !this.getPetted() && !this.getWalked()){
             return true;
         } else { 
@@ -21,7 +21,7 @@ public class Cat extends Pet{
     
 
     public String talk(){
-        if(happiness){
+        if(isHappy){
             return "meow"
         } else {
             return "hiss" 
