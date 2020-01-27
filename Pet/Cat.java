@@ -2,8 +2,7 @@ public class Cat extends Pet{
 
 
     public Cat(String name, String breed){
-        super(name);
-        super(breed);
+        super(name, breed);
     }
 
     public Cat(String breed){
@@ -21,7 +20,7 @@ public class Cat extends Pet{
     
 
     public String talk(){
-        if(isHappy){
+        if(isHappy()){
             return "meow"
         } else {
             return "hiss" 

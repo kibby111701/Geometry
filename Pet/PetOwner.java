@@ -7,23 +7,29 @@ public class PetOwner{
         this.pets = pets;
     }
 
-    public void feed(){
-        for (int i = 0; i < pets.length; i++){
-            pets[i].setHunger(true);
-        } 
+    public void feed(int x){
+        pets[x].setHunger(true);
     }
 
 
-    public void pet(){
-        for(int i = 0; i < pets.length; i++){
-            pets[i].setCounter(pets[i].getCounter() + 1);
-            pets[i].setPet(true);
+    public void pet(int x){
+        pets[x].setPet(true);
+        pets[x].setCounter(pets[x].getCounter()+1);
+    }
+
+    public void walk(int x){
+        pets[x].setWalk(true);
+    }
+
+    public void ride(int x){
+        if (pets[x] instanceof Horse){
+            pets[x].ride();
         }
     }
 
-    public void walk(){
-        for(int i = 0; i < pets.length; i++){
-            pets[i].setWalk(true);
+    public void brush(int x){
+        if (pets[x] instanceof Horse){
+            pets[x].brush();
         }
     }
 

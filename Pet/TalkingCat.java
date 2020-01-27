@@ -19,7 +19,7 @@ public class TalkingCat extends Cat{
         insults[2] = "You're a simp";
         insults[3] = "I hope you get the coronavirus";
 
-        if(isHappy){
+        if(isHappy()){
             return compliments[rand.nextInt(4)];
         }
         else{
