@@ -8,7 +8,7 @@ public class PetOwner{
     }
 
     public void feed(int x){
-        pets[x].setHunger(true);
+        pets[x].setFed(true);
     }
 
 

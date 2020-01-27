@@ -23,4 +23,13 @@ public class Horse extends Pet{
             return false;
         }
     }
+
+    public String talk(){
+        if (isHappy()){
+            return "Neigh";
+        }
+        else{
+            return "Sad neigh";
+        }
+    }
 }

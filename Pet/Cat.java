@@ -21,9 +21,9 @@ public class Cat extends Pet{
 
     public String talk(){
         if(isHappy()){
-            return "meow"
+            return "meow";
         } else {
-            return "hiss" 
+            return "hiss"; 
         }
     }
 }

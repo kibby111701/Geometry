@@ -58,7 +58,7 @@ public class Pet{
         this.petCounter= petCounter;
     }
     
-    public void setHunger(boolean fed){
+    public void setFed(boolean fed){
         this.hunger = fed;
     }
 
