@@ -23,13 +23,13 @@ public class PetOwner{
 
     public void ride(int x){
         if (pets[x] instanceof Horse){
-            pets[x].ride();
+            ((Horse)pets[x]).ride();
         }
     }
 
     public void brush(int x){
         if (pets[x] instanceof Horse){
-            pets[x].brush();
+            ((Horse)pets[x]).brush();
         }
     }
 
